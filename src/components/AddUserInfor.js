@@ -22,8 +22,7 @@ class AddUserInfor extends React.Component {
 
     handleOnChangeName = (e) => {
         this.setState({
-            name: e.target.value,
-            age: e.target.value
+            name: e.target.value
         })
     }
 
