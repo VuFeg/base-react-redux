@@ -1,46 +1,37 @@
 import React, { useState } from "react";
 
 const AddUserInfor = (props) => {
-    const [user, setUser] = useState({
-        name: "VuFeng",
-        address: "Da Nang City",
-        age: 20
-    });
+    const [name, setName] = useState("Vu Feng");
+    const [age, setAge] = useState(20);
 
     const handleOnChangeName = (e) => {
-        setUser({
-            name: e.target.value,
-            age: user.age
-        });
+        setName(e.target.value);
     }
 
     const handleOnChangeAge = (e) => {
-        setUser({
-            name: user.name,
-            age: e.target.value
-        });
+        setAge(e.target.value);
     }
 
     const handleOnSubmit = (e) => {
         e.preventDefault();
         props.handleAddNewUser({
             id: props.length + 1,
-            name: user.name,
-            age: user.age
+            name: name,
+            age: age
         });
     }
 
     return (
         <div>
-            My name is {user.name}. I'm {user.age}
+            My name is {name}. I'm {age}
             <form form onSubmit={(e) => handleOnSubmit(e)}>
                 <input
-                    value={user.name}
+                    value={name}
                     type="text"
                     onChange={(e) => handleOnChangeName(e)}
                 />
                 <input
-                    value={user.age}
+                    value={age}
                     type="text"
                     onChange={(e) => handleOnChangeAge(e)}
                 />
