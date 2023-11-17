@@ -1,25 +1,22 @@
 import React, { useEffect, useState } from "react";
 import "./DisplayInfor.scss";
-import logo from "./../logo.svg"
 
 const DisplayInfor = (props) => {
-    const { listUsers } = props;
+    const { listUsers, handleDeleteUser } = props;
     const [isShowHideListUser, setShowHideListUser] = useState(true);
 
     const handleShowHideListUser = () => {
         setShowHideListUser(!isShowHideListUser);
     }
 
-    console.log("render");
-
     useEffect(() => {
         if (listUsers.length === 0) {
             alert("You deleted all the users");
         }
+
         setTimeout(() => {
             document.title = "Vu Feng";
         }, 3000);
-        console.log("useEffect");
     }, [listUsers])
 
     return (
@@ -36,7 +33,7 @@ const DisplayInfor = (props) => {
                             <div key={user.id} className={+user.age > 18 ? "green" : "red"}>
                                 <div>My name is {user.name}</div>
                                 <div>I'm {user.age}</div>
-                                <button onClick={() => props.handleDeleteUser(user.id)}>Delete</button>
+                                <button onClick={() => handleDeleteUser(user.id)}>Delete</button>
                                 <hr />
                             </div>
                         )
