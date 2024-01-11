@@ -8,10 +8,55 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media (min-width: 1550px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1535px !important;
+  }
+}
+
 .app-container {
+
   .header-container {
-    .navbar-nav {
+
+    .btn-login {
+      border: 1px solid transparent;
+      background-color: transparent;
+      font-size: 16px;
+      font-weight: 500;
+      margin-right: 15px;
+      height: 40px;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .btn-signup {
+      border: 1px solid #000;
+      border-radius: 10px;
+      padding: 0 15px;
+      background-color: #000;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      margin-right: 15px;
+      height: 40px;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .navbar {
       z-index: 10;
+      padding-top: 20px;
+      background-color: rgba(0, 0, 0, 0) !important;
 
       .nav-link {
         &.active {
@@ -20,4 +65,54 @@ body {
       }
     }
   }
+
+  .homepage-container {
+
+
+    .homepage-content {
+      position: relative;
+      padding: 100px;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      .header {
+        font-size: 80px;
+        letter-spacing: -0.02em;
+        line-height: 1;
+      }
+
+      .title {
+        font-size: 20px;
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+      }
+
+      .btn-content {
+        button {
+          border: 1px solid #000;
+          border-radius: 10px;
+          padding: 0 15px;
+          background-color: #000;
+          color: #fff;
+          font-size: 16px;
+          font-weight: 500;
+          margin-right: 15px;
+          height: 40px;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
+
+video {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
 }
