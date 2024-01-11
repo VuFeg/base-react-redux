@@ -10,6 +10,8 @@ import {
 } from 'react-pro-sidebar';
 import { FaTachometerAlt, FaGem, FaList, FaGithub, FaRegLaughWink, FaHeart } from 'react-icons/fa';
 import sidebarBg from '../../assets/bg2.jpg';
+import { FaReact } from "react-icons/fa";
+import './SideBar.scss';
 
 const SideBar = (props) => {
     const { image, collapsed, toggled, handleToggleSidebar } = props;
@@ -35,7 +37,8 @@ const SideBar = (props) => {
                             whiteSpace: 'nowrap',
                         }}
                     >
-                        Vu Feng
+                        <FaReact size='3em' color={"#00bfff"} />
+                        <span>Vu Feng</span>
                     </div>
                 </SidebarHeader>
 
@@ -43,20 +46,18 @@ const SideBar = (props) => {
                     <Menu iconShape="circle">
                         <MenuItem
                             icon={<FaTachometerAlt />}
-                            suffix={<span className="badge red">New</span>}
                         >
-                            dashboard
+                            Dashboard
                         </MenuItem>
-                        <MenuItem icon={<FaGem />}> components</MenuItem>
                     </Menu>
                     <Menu iconShape="circle">
                         <SubMenu
-                            suffix={<span className="badge yellow">3</span>}
-                            icon={<FaRegLaughWink />}
+                            icon={<FaGem />}
+                            title="Features"
                         >
-                            <MenuItem>submenu 1</MenuItem>
-                            <MenuItem>submenu 2</MenuItem>
-                            <MenuItem>submenu 3</MenuItem>
+                            <MenuItem>Quản lý User</MenuItem>
+                            <MenuItem>Quản lý Bài Quiz</MenuItem>
+                            <MenuItem>Quản lý Câu Hỏi</MenuItem>
                         </SubMenu>
                     </Menu>
                 </SidebarContent>
@@ -69,14 +70,14 @@ const SideBar = (props) => {
                         }}
                     >
                         <a
-                            href="https://github.com/azouaoui-med/react-pro-sidebar"
+                            href="https://github.com/VuFeg"
                             target="_blank"
                             className="sidebar-btn"
                             rel="noopener noreferrer"
                         >
                             <FaGithub />
                             <span style={{ whiteSpace: 'nowrap', textOverflow: 'ellipsis', overflow: 'hidden' }}>
-                                viewSource
+                                Vu Fenggg
                             </span>
                         </a>
                     </div>
