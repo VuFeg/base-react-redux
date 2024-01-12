@@ -48,6 +48,7 @@ const SideBar = (props) => {
                             icon={<FaTachometerAlt />}
                         >
                             Dashboard
+                            <Link to="/" />
                         </MenuItem>
                     </Menu>
                     <Menu iconShape="circle">

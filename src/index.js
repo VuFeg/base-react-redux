@@ -13,6 +13,8 @@ import {
 import User from './components/User/User';
 import Admin from './components/Admin/Admin';
 import HomePage from './components/Home/HomePage';
+import DashBoar from './components/Admin/Content/DashBoar';
+import ManageUser from './components/Admin/Content/ManageUser';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,7 +26,10 @@ root.render(
           <Route index element={<HomePage />} />
           <Route path='/Users' element={<User />} />
         </Route>
-        <Route path='/Admins' element={<Admin />} />
+        <Route path='/Admins' element={<Admin />} >
+          <Route index element={<DashBoar />} />
+          <Route path='ManageUsers' element={<ManageUser />} />
+        </Route>
       </Routes>
     </BrowserRouter>
     {/* </React.StrictMode> */}
